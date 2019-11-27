@@ -9,7 +9,8 @@ public class WritersFactory {
     Map<String, Writer> writers = new HashMap<>();
 
     private WritersFactory() {
-
+        registerWriter("memory", new MemoryWriter());
+        registerWriter("console", new ConsoleWriter());
     }
 
     public static WritersFactory getInstance()

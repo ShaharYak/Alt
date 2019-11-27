@@ -8,14 +8,14 @@ import logger.Log;
 public class MemoryWriter implements  Writer {
 
 
-    public static final String FILE_PATH = "~/messages/logs.txt";
+    public static final String FILE_PATH = "~/alt/memory/logs.txt";
 
     @Override
     public void write(Log log) {
         try {
             Files.write(Paths.get(FILE_PATH), log.toString().getBytes());
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
 }
